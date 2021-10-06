@@ -14,9 +14,37 @@
 
 <body>
     <h1>Rock Paper Scissors</h1>
-    <label>
-        <input type="radio" id="type">
-    </label>
+    <section id="user-input-container">
+        <label>
+            <input type="radio" name="shoot" id="rock" value="rock">
+            <img src="./assets/rock.png" alt="rock">
+        </label>
+        <label>
+            <input type="radio" name="shoot" id="paper" value="paper">
+            <img src="./assets/paper.png" alt="paper">
+        </label>
+        <label>
+            <input type="radio" name="shoot" id="scissors" value="scissors">
+            <img src="./assets/scissors.png" alt="scissors">
+        </label>
+    </section>
+
+    <section id="user-action-container">
+        <p id="error" class="hidden">What are you doing?</p>
+        <button id="go-button">Shoot!</button>
+    </section>
+
+    <section id="comp-input-container">
+        <label>
+            <span id="comp-shoot"></span>
+        </label>
+
+            <span id="result">Result here</span>
+            <p>You have won <span id="wins">0</span> times</p>
+            <p>You have lost <span id="losses">0</span> times</p>
+            <p>You have tied <span id="draws">0</span> times</p>
+
+    </section>
 
     <script type="module" src="./app.js"></script>
 </body>

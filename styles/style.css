@@ -1,0 +1,11 @@
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    border: 4px solid yellow;
+}
+
+.hidden {
+    display: none;
+}

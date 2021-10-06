@@ -9,7 +9,6 @@
     * rules
     * three radio button inputs
 
-
 ### State
     * userChoice
     * wins / losses counter

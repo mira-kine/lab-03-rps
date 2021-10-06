@@ -1,0 +1,1 @@
+export const getRandomThrow = Math.round(Math.random()*3);
