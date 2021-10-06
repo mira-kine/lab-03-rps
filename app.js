@@ -11,4 +11,5 @@ const userWins = document.getElementById('wins');
 goButton.addEventListener('click', ()=>{
   console.log('clicking');
   const selected = document.querySelector('input[type=radio]:checked');
+  const userChoice = selected.value;
 })

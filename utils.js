@@ -11,16 +11,18 @@ export function didUserWin(userChoice, compChoice){
     if (userChoice === compChoice) {
         return 'draw'
     }
-    if (userChoice[0] && compChoice[2]) {
+    else if (userChoice === 'rock' && compChoice === 'scissors') {
         return 'you win'
     }
-    else if (userChoice[1] && compChoice[0]) {
+    else if (userChoice === 'paper' && compChoice === 'rock') {
         return 'you win'
     }
-    else if (userChoice[2] && compChoice[1]) {
+    else if (userChoice === 'scissors' && compChoice === 'paper') {
         return 'you win'
     }
-    else return 'you lose'
+    else {
+        return 'you lose'
+    }
 };
 
 
