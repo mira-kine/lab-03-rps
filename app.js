@@ -6,7 +6,7 @@ const tieSpan = document.getElementById('ties');
 const winSpan = document.getElementById('wins');
 const loseSpan = document.getElementById('losses');
 const error = document.getElementById('error');
-let userResult = document.getElementById('results');
+const resultText = document.getElementById('result');
 
 let ties = 0;
 let wins = 0;
@@ -22,19 +22,21 @@ goButton.addEventListener('click', ()=>{
 
     const compChoice = getRandomThrow();
     const userChoice = selected.value;
-    let result;
-  
+    let userResult;
     if (userChoice === compChoice) {
         ties ++;
+        userResult = 'you tied';
     }
     else if (didUserWin(userChoice, compChoice)) {
         wins ++;
+        userResult = 'you win';
     }
     else {
         losses ++;
+        userResult = 'you lose!';
     }
 
-    userResult.textContent = result;
+    resultText.textContent = `${userResult}`;
     tieSpan.textContent = ties;
     winSpan.textContent = wins;
     loseSpan.textContent = losses;
