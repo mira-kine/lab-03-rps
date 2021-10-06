@@ -2,6 +2,28 @@
 
 ## Making a plan
 
+### HTML
+    * button for player to submit choice
+    * text field for displaying result -> how many times you have won or lost (counter)
+    * what the computer generates
+    * rules
+    * three radio button inputs
+
+
+### State
+    * userChoice
+    * wins / losses counter
+    * compChoice (random)
+
+### Events listening for
+    * button click
+        * generate random compChoice
+        * get user's input (userChoice)
+        * compare userChoice to compChoice
+            * if guessed correctly -- increment wins
+            * else increment the losses
+        * display the results
+
 (bolded steps are mandatory, unbolded are for more advanced projects)
 
 1) **Make a drawing of your app. Simple "wireframes"**
