@@ -1,5 +1,5 @@
 
-import { getRandomThrow, didUserWin } from "./get-random-throw.js";
+import { getRandomThrow, didUserWin } from './get-random-throw.js';
 
 const goButton = document.getElementById('go-button');
 const tieSpan = document.getElementById('ties');
@@ -13,28 +13,29 @@ let wins = 0;
 let losses = 0;
 
 goButton.addEventListener('click', ()=>{
-  const selected = document.querySelector('input[type=radio]:checked');
+    const selected = document.querySelector('input[type=radio]:checked');
 
-  error.classList.add('hidden');
-  if (!selected) {
-    return error.classList.remove('hidden');
-  }
+    error.classList.add('hidden');
+    if (!selected) {
+        return error.classList.remove('hidden');
+    }
 
-  const compChoice = getRandomThrow();
-  const userChoice = selected.value;
+    const compChoice = getRandomThrow();
+    const userChoice = selected.value;
+    let result;
+  
+    if (userChoice === compChoice) {
+        ties ++;
+    }
+    else if (didUserWin(userChoice, compChoice)) {
+        wins ++;
+    }
+    else {
+        losses ++;
+    }
 
-  if (userChoice === compChoice) {
-    ties ++;
-  }
-  else if (didUserWin(selected, compChoice)) {
-    wins ++;
-  }
-  else {
-    losses ++;
-  }
-userResult.textContent = result;
-tieSpan.textContent = ties;
-winSpan.textContent = wins;
-loseSpan.textContent = ties;
-
+    userResult.textContent = result;
+    tieSpan.textContent = ties;
+    winSpan.textContent = wins;
+    loseSpan.textContent = losses;
 });

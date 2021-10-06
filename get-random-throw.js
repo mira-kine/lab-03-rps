@@ -4,26 +4,26 @@
 
 
 export function getRandomThrow() {
-    return ['rock', 'paper', 'scissors'][Math.floor(Math.random()*3)];
-};
+    return ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+}
 
 export function didUserWin(userChoice, compChoice){
-    if (userChoice === compChoice) {
-        return 'draw'
-    }
-    else if (userChoice === 'rock' && compChoice === 'scissors') {
-        return 'you win'
+    if (userChoice === 'rock' && compChoice === 'scissors') {
+        return true;
     }
     else if (userChoice === 'paper' && compChoice === 'rock') {
-        return 'you win'
+        return true;
     }
     else if (userChoice === 'scissors' && compChoice === 'paper') {
-        return 'you win'
+        return true;
+    }
+    else if (userChoice === compChoice) {
+        return 'draw';
     }
     else {
-        return 'you lose'
+        return false;
     }
-};
+}
 
 
 // possible outcomes: 'win', 'lose', 'draw'
