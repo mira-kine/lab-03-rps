@@ -1,15 +1,40 @@
-// import functions and grab DOM elements
-import { getRandomThrow } from "./get-random-throw.js";
-// initialize global state
+
+import { getRandomThrow, didUserWin } from "./get-random-throw.js";
+
 const goButton = document.getElementById('go-button');
-const userWins = document.getElementById('wins');
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const tieSpan = document.getElementById('ties');
+const winSpan = document.getElementById('wins');
+const loseSpan = document.getElementById('losses');
+const error = document.getElementById('error');
+let userResult = document.getElementById('results');
+
+let ties = 0;
+let wins = 0;
+let losses = 0;
 
 goButton.addEventListener('click', ()=>{
-  console.log('clicking');
   const selected = document.querySelector('input[type=radio]:checked');
+
+  error.classList.add('hidden');
+  if (!selected) {
+    return error.classList.remove('hidden');
+  }
+
+  const compChoice = getRandomThrow();
   const userChoice = selected.value;
-})
+
+  if (userChoice === compChoice) {
+    ties ++;
+  }
+  else if (didUserWin(selected, compChoice)) {
+    wins ++;
+  }
+  else {
+    losses ++;
+  }
+userResult.textContent = result;
+tieSpan.textContent = ties;
+winSpan.textContent = wins;
+loseSpan.textContent = ties;
+
+});
