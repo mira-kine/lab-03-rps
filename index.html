@@ -14,6 +14,7 @@
 
 <body>
     <h1>Rock Paper Scissors</h1>
+    <p id="error" class="hidden">Select one and click shoot!</p>
     <section id="user-input-container">
         <label>
             <input type="radio" name="shoot" id="rock" value="rock">
@@ -29,21 +30,13 @@
         </label>
     </section>
 
-    <section id="user-action-container">
-        <p id="error" class="hidden">Select one and click shoot!</p>
-        <button id="go-button">Shoot!</button>
-    </section>
+        <button id="go-button" img src="">Shoot!</button>
 
-    <section id="comp-input-container">
-        <label>
-            <span id="comp-shoot"></span>
-        </label>
-
-            <span id="result"></span>
-            <p>You have won <span id="wins">0</span> times</p>
-            <p>You have lost <span id="losses">0</span> times</p>
-            <p>You have tied <span id="ties">0</span> times</p>
-
+    <section class="comp-input-container">
+            <span class="hidden-result" id="result"></span>
+            <p>Wins: <span id="wins">0</span></p>
+            <p>Losses: <span id="losses">0</span></p>
+            <p>Ties: <span id="ties">0</span></p>
     </section>
 
     <script type="module" src="./app.js"></script>

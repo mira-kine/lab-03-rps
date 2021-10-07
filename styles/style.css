@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Waltograph';
+    src: url("/assets/waltograph/Waltograph/waltograph42.ttf");
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/assets/cute-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Waltograph', cursive;
+    font-size: 6rem;
+    display: inline-block;
+}
+
+#user-input-container {
+    align-content: space-between;
+    flex-direction: row;
+}
+
 input[type=radio] {
     display: none;
 }
@@ -8,4 +33,29 @@ input[type=radio]:checked + img {
 
 .hidden {
     display: none;
+}
+
+.hidden-result {
+    display: none;
+}
+
+.comp-input-container {
+    display: inline-block;
+    font-size: 3rem;
+    font-family: 'Waltograph', cursive;
+    margin: auto;
+}
+
+#go-button {
+    align-content: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+img {
+    opacity: 1;
+}
+
+img:hover {
+    opacity: 0.75;
 }

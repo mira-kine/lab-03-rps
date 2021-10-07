@@ -26,14 +26,17 @@ goButton.addEventListener('click', ()=>{
     if (userChoice === compChoice) {
         ties ++;
         userResult = 'you tied';
+        resultText.classList.remove('hidden-result');
     }
     else if (didUserWin(userChoice, compChoice)) {
         wins ++;
         userResult = 'you win';
+        resultText.classList.remove('hidden-result');
     }
     else {
         losses ++;
         userResult = 'you lose!';
+        resultText.classList.remove('hidden-result');
     }
 
     resultText.textContent = `${userResult}`;
