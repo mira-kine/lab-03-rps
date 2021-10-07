@@ -44,3 +44,4 @@ goButton.addEventListener('click', ()=>{
     winSpan.textContent = wins;
     loseSpan.textContent = losses;
 });
+

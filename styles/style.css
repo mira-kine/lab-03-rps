@@ -43,7 +43,7 @@ input[type=radio]:checked + img {
     display: flex;
     font-size: 3rem;
     font-family: 'Waltograph', cursive;
-    margin: auto;
+    flex-direction: row;
 }
 
 #go-button {
@@ -85,5 +85,9 @@ img:hover {
 
 #result {
     align-items: center;
-    
+    padding: 30px;
+}
+
+#wins, #losses, #ties {
+    padding: 30px;
 }
