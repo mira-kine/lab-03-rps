@@ -5,8 +5,8 @@ describe('Example Test', ()=>{
     });
 
     describe('HTML elements', ()=>{   
-        it('contains body', ()=>{
-            cy.get('body').should('be.visible');
+        it('shoot button should work', ()=>{
+            cy.get('go-button').should('be.visible');
         });
     });
 });

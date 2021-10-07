@@ -16,21 +16,27 @@
     <h1>Rock Paper Scissors</h1>
     <p id="error" class="hidden">Select one and click shoot!</p>
     <section id="user-input-container">
-        <label>
-            <input type="radio" name="shoot" id="rock" value="rock">
-            <img src="./assets/rock.png" alt="rock">
-        </label>
-        <label>
-            <input type="radio" name="shoot" id="paper" value="paper">
-            <img src="./assets/paper.png" alt="paper">
-        </label>
-        <label>
-            <input type="radio" name="shoot" id="scissors" value="scissors">
-            <img src="./assets/scissors.png" alt="scissors">
-        </label>
+        <div class="user-options" id="rock-pic">
+            <label>
+                <input type="radio" name="shoot" id="rock" value="rock">
+                <img src="./assets/rock.png" alt="rock">
+            </label>
+        </div>
+        <div class="user-options" id="paper-pic">
+            <label>
+                <input type="radio" name="shoot" id="paper" value="paper">
+                <img src="./assets/paper.png" alt="paper">
+            </label>
+        </div>
+        <div class="user-options" id="scissor-pic">
+            <label>
+                <input type="radio" name="shoot" id="scissors" value="scissors">
+                <img src="./assets/scissors.png" alt="scissors">
+            </label>
+        </div> 
     </section>
 
-        <button id="go-button" img src="">Shoot!</button>
+        <button id="go-button">Shoot!</button>
 
     <section class="comp-input-container">
             <span class="hidden-result" id="result"></span>

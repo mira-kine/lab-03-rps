@@ -19,8 +19,8 @@ h1{
 }
 
 #user-input-container {
-    align-content: space-between;
-    flex-direction: row;
+    display: flex;
+    align-items: center;
 }
 
 input[type=radio] {
@@ -40,7 +40,7 @@ input[type=radio]:checked + img {
 }
 
 .comp-input-container {
-    display: inline-block;
+    display: flex;
     font-size: 3rem;
     font-family: 'Waltograph', cursive;
     margin: auto;
@@ -49,7 +49,16 @@ input[type=radio]:checked + img {
 #go-button {
     align-content: center;
     justify-content: center;
-    display: inline-block;
+    display: flex;
+    border-radius: 50%;
+    border: 3px solid red;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Waltograph', cursive;
+    color: yellow;
+    background-color: red;
 }
 
 img {
@@ -58,4 +67,23 @@ img {
 
 img:hover {
     opacity: 0.75;
+}
+
+#rock-pic {
+    padding: 30px;
+    margin-right: 20px;
+}
+
+#paper-pic {
+    padding: 30px;
+    margin-right: 50px;
+}
+
+#scissors-pic {
+    padding: 30px;
+}
+
+#result {
+    align-items: center;
+    
 }
