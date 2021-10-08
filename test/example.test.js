@@ -1,9 +1,9 @@
-import { didUserWin } from '../utils.js';
+import { didUserWin } from '../get-random-throw.js';
 
 const test = QUnit.test;
 
 test('user:rock, comp:scissors', (expect) => {
-    const expected = 'you win';
+    const expected = true;
     const actual = didUserWin('rock', 'scissors');
     expect.equal(actual, expected);
 });
@@ -15,7 +15,7 @@ test('user:rock, comp:rock', (expect) => {
 });
 
 test('user:rock, comp:paper', (expect) => {
-    const expected = 'you lose';
+    const expected = false;
     const actual = didUserWin('rock', 'paper');
     expect.equal(actual, expected);
 });
